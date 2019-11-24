@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.apache.commons.lang3.time.DateFormatUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -56,12 +57,12 @@ public class Book implements Serializable {
 		this.updatedAt = updatedAt;
 	}
 	
-	public Date getCreatedAt() {
-		return DateUtils.addHours(this.createdAt, 8);
+	public String getCreatedAt() {
+		return DateFormatUtils.format(this.createdAt, "Y-m-d HH:mm:ss");
 	}
 	
-	public Date getUpdatedt() {
-		return DateUtils.addHours(this.updatedAt, 8);
+	public String getUpdatedt() {
+		return DateFormatUtils.format(this.updatedAt, "Y-m-d HH:mm:ss");
 	}
 	
 
