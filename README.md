@@ -12,6 +12,7 @@ Dependency Used
 - [x] Convert APIs to Database
 - [ ] Add Author
 - [ ] Add Relationships
+- [ ] Add request validations
 - [ ] Add Authentication
 
 ## Application.Properties
@@ -29,3 +30,7 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect // very importan
 * You don't have to do DB Migration. Hibernate will automatically create DB Tables based on your Java Entity
 * Don't forget to `@Autowired` your repository if you want to use them
 * `CrudRepository` is similar to `Laravel's Eloquent`
+* `Models` contains the Entity
+* `Services` contains business logic which uses repositories
+* `Repositories` is just like Eloquent Models
+* `Controllers` handle the request response
