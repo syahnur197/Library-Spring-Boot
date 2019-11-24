@@ -27,7 +27,7 @@ public class BookController {
 	private BookService bookService;
 	
 	@GetMapping("")
-	public ArrayList<Book> index() {
+	public Iterable<Book> index() {
 		return this.bookService.getAll();
 		
 	}
@@ -38,19 +38,19 @@ public class BookController {
 	}
 	
 	@PostMapping("")
-	public ArrayList<Book> store(@RequestBody Book book) {
+	public Iterable<Book> store(@RequestBody Book book) {
 		this.bookService.add(book);
 		return this.bookService.getAll();
 	}
 	
 	@DeleteMapping("/{id}")
-	public ArrayList<Book> delete(@PathVariable int id) {
+	public Iterable<Book> delete(@PathVariable int id) {
 		this.bookService.delete(id);
 		return this.bookService.getAll();
 	}
 	
 	@PutMapping("/{id}")
-	public ArrayList<Book> update(@PathVariable int id, @RequestBody Book book) {
+	public Iterable<Book> update(@PathVariable int id, @RequestBody Book book) {
 		this.bookService.update(id, book);
 		return this.bookService.getAll();
 	}
