@@ -5,7 +5,7 @@ Dependency Used
 * Lombok
 
 ## To Do List
-[] Add Database
-[] Add Author
-[] Add Relationships
-[] Convert APIs to Database
+- [ ] Add Database
+- [ ] Add Author
+- [ ] Add Relationships
+- [ ] Convert APIs to Database
